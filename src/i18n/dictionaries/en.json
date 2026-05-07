@@ -20,7 +20,7 @@
     "heroCtaPrimary": "Reserve a room",
     "heroCtaSecondary": "Explore rooms",
     "introTitle": "Stay close to the sea, far from the noise",
-    "introBody": "Hotel Silver Pearl is a newly opened, owner-operated property in the heart of Kuakata. Glass-front facade, calm interiors and balconies that look over the palms — we kept the design simple so the coast can do the talking.",
+    "introBody": "Hotel Silver Pearl is a newly opened, owner-operated property in the heart of Kuakata. Glass-front facade, calm interiors and balconies that look over the coconut trees — we kept the design simple so the coast can do the talking.",
     "roomsTitle": "Rooms",
     "roomsSubtitle": "Three categories, all with buffet breakfast included.",
     "roomsCta": "View all rooms",
@@ -59,7 +59,7 @@
     },
     "superDeluxe": {
       "name": "Super Deluxe",
-      "summary": "Quiet, well-lit room for two, soft furnishing, work desk and a view of the surrounding palms."
+      "summary": "Quiet, well-lit room for two, soft furnishing, work desk and a view of the surrounding coconut trees."
     },
     "deluxe": {
       "name": "Deluxe",
