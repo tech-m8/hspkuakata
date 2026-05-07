@@ -1,0 +1,162 @@
+{
+  "site": {
+    "name": "Hotel Silver Pearl",
+    "tagline": "A modern seaside stay in Kuakata",
+    "shortDescription": "A contemporary hotel a few minutes from Kuakata Sea Beach, with refined rooms, buffet breakfast and warm Bangladeshi hospitality."
+  },
+  "nav": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "amenities": "Amenities",
+    "gallery": "Gallery",
+    "location": "Location",
+    "contact": "Contact",
+    "bookNow": "Book Now"
+  },
+  "home": {
+    "heroEyebrow": "Kuakata, Patuakhali",
+    "heroTitle": "Where the Bay of Bengal meets quiet luxury",
+    "heroSubtitle": "Family-run, freshly built and a short walk from one of the few beaches in the world where you can watch both sunrise and sunset over the sea.",
+    "heroCtaPrimary": "Reserve a room",
+    "heroCtaSecondary": "Explore rooms",
+    "introTitle": "Stay close to the sea, far from the noise",
+    "introBody": "Hotel Silver Pearl is a newly opened, owner-operated property in the heart of Kuakata. Glass-front facade, calm interiors and balconies that look over the palms — we kept the design simple so the coast can do the talking.",
+    "roomsTitle": "Rooms",
+    "roomsSubtitle": "Three categories, all with buffet breakfast included.",
+    "roomsCta": "View all rooms",
+    "amenitiesTitle": "What's included with every stay",
+    "galleryTitle": "A look around",
+    "galleryCta": "Open gallery",
+    "locationTitle": "Find us in Kuakata",
+    "locationBody": "Kuakata, Patuakhali — about an hour from Patuakhali town and reachable from Dhaka by bus or launch via Barisal.",
+    "locationCta": "How to reach",
+    "ctaTitle": "Ready to book?",
+    "ctaBody": "Message us on WhatsApp for the fastest reply, or fill out the contact form and we'll get back within a few hours.",
+    "ctaPrimary": "Chat on WhatsApp",
+    "ctaSecondary": "Contact us"
+  },
+  "rooms": {
+    "pageTitle": "Rooms & Tariff",
+    "pageSubtitle": "All rates are per room, per night, in Bangladeshi Taka. Net amount already includes the discount, service charge and VAT.",
+    "validity": "Rate chart valid till November 2026.",
+    "guestsLabel": "Up to {{count}} guests",
+    "perNight": "per night",
+    "netAmount": "Net amount",
+    "showBreakdown": "Show price breakdown",
+    "hideBreakdown": "Hide price breakdown",
+    "breakdown": {
+      "base": "Base rate",
+      "discount": "Discount (25%)",
+      "service": "Service charge (2.5%)",
+      "vat": "VAT (15%)",
+      "net": "Net total"
+    },
+    "inquireWhatsApp": "Inquire on WhatsApp",
+    "inclusionsTitle": "Included in every stay",
+    "familyDeluxe": {
+      "name": "Family Deluxe",
+      "summary": "Spacious room with one king bed and a single bed, marble accent wall, large window, balcony view."
+    },
+    "superDeluxe": {
+      "name": "Super Deluxe",
+      "summary": "Quiet, well-lit room for two, soft furnishing, work desk and a view of the surrounding palms."
+    },
+    "deluxe": {
+      "name": "Deluxe",
+      "summary": "Comfortable room for two with floor-to-ceiling windows, fresh linens and all essentials."
+    },
+    "feature": {
+      "ac": "Air conditioning",
+      "tv": "LED TV",
+      "wifi": "Free Wi-Fi",
+      "wardrobe": "Wardrobe",
+      "desk": "Work desk",
+      "kettle": "Tea/coffee kettle",
+      "balcony": "Balcony",
+      "bathroom": "Attached bathroom",
+      "view": "Open view"
+    }
+  },
+  "inclusions": {
+    "breakfast": "Buffet breakfast",
+    "welcomeDrink": "Welcome drink on arrival",
+    "water": "2× 500 ml drinking water daily",
+    "wifi": "Free Wi-Fi throughout",
+    "kettle": "In-room tea & coffee kettle",
+    "parking": "Free car parking"
+  },
+  "amenities": {
+    "pageTitle": "Amenities",
+    "pageSubtitle": "Everything we provide so you can settle in and head straight for the beach.",
+    "items": {
+      "buffetBreakfast": "Buffet breakfast",
+      "welcomeDrink": "Welcome drink on arrival",
+      "water": "Daily drinking water",
+      "wifi": "Free high-speed Wi-Fi",
+      "kettle": "In-room tea & coffee",
+      "parking": "Free on-site car parking",
+      "ac": "Air-conditioned rooms",
+      "tv": "LED TV in every room",
+      "balcony": "Balcony with view (select rooms)",
+      "frontDesk": "24-hour front desk",
+      "housekeeping": "Daily housekeeping",
+      "linens": "Fresh linens & towels"
+    }
+  },
+  "gallery": {
+    "pageTitle": "Gallery",
+    "pageSubtitle": "Photos of the building, signage and rooms.",
+    "filters": {
+      "all": "All",
+      "exterior": "Exterior",
+      "rooms": "Rooms",
+      "signage": "Signage"
+    },
+    "open": "Open photo",
+    "close": "Close",
+    "next": "Next",
+    "prev": "Previous"
+  },
+  "location": {
+    "pageTitle": "Location & how to reach",
+    "pageSubtitle": "Hotel Silver Pearl, Kuakata, Patuakhali — Bangladesh.",
+    "addressLabel": "Address",
+    "addressLine": "Kuakata, Patuakhali, Bangladesh",
+    "mapTitle": "Kuakata on Google Maps",
+    "byBusTitle": "By bus from Dhaka",
+    "byBusBody": "Direct overnight buses run from Gabtoli, Sayedabad and Kallyanpur to Kuakata. Travel time is roughly 8–10 hours.",
+    "byLaunchTitle": "By launch via Barisal",
+    "byLaunchBody": "Take an overnight launch from Sadarghat to Barisal, then a 4–5 hour bus to Kuakata via Patuakhali.",
+    "byCarTitle": "By car",
+    "byCarBody": "Drive from Dhaka via the Padma Bridge — around 7–8 hours depending on traffic. Free parking is available on-site."
+  },
+  "contact": {
+    "pageTitle": "Contact us",
+    "pageSubtitle": "WhatsApp is the fastest way to reach us. The booking form below sends your details straight into a WhatsApp chat.",
+    "channelsTitle": "Direct channels",
+    "phoneLabel": "Phone",
+    "whatsappLabel": "WhatsApp",
+    "emailLabel": "Email",
+    "formTitle": "Send a booking inquiry",
+    "form": {
+      "name": "Your name",
+      "email": "Email",
+      "phone": "Phone",
+      "checkin": "Check-in",
+      "checkout": "Check-out",
+      "roomType": "Room type",
+      "roomTypeAny": "Any / not sure",
+      "guests": "Guests",
+      "message": "Message",
+      "submit": "Send via WhatsApp",
+      "successTitle": "WhatsApp opened in a new tab.",
+      "successBody": "Hit send in WhatsApp and we'll reply soon. If WhatsApp didn't open, call us or email {{email}}.",
+      "fallbackNote": "Prefer email? Write to {{email}}."
+    },
+    "whatsappPrefill": "Hello, I'd like to make a booking inquiry for Hotel Silver Pearl."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "Kuakata, Patuakhali, Bangladesh"
+  }
+}
