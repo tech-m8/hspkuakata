@@ -62,14 +62,6 @@ export function Logo({
           strokeLinecap="round"
           fill="none"
         />
-        <ellipse
-          cx="102"
-          cy="82"
-          rx="3.5"
-          ry="1.8"
-          fill={waveStroke}
-          opacity={0.85}
-        />
       </svg>
       {showWordmark && (
         <span
