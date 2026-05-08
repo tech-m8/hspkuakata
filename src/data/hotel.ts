@@ -7,8 +7,7 @@ export const hotel = {
   phones: ["+8801968014750", "+8801942704560"],
   whatsapp: "8801942704560",
   website: "https://hspkuakata.com",
-  // Approximate Kuakata center; replace with the hotel's exact coords once owner confirms.
-  coordinates: { lat: 21.8167, lng: 90.1167 },
+  coordinates: { lat: 21.8204, lng: 90.11816 },
   priceRangeBdt: { min: 2643, max: 3536 },
 } as const;
 
