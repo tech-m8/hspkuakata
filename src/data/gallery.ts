@@ -1,4 +1,4 @@
-export type GalleryCategory = "exterior" | "rooms" | "signage";
+export type GalleryCategory = "exterior" | "rooms" | "interior" | "dining" | "signage";
 
 export type GalleryItem = {
   src: string;
@@ -16,6 +16,15 @@ export const gallery: GalleryItem[] = [
   { src: "/images/signage/entrance-sign.jpg", width: 1102, height: 826, category: "signage" },
   { src: "/images/rooms/family-deluxe/twin-bed-marble.jpg", width: 1600, height: 1200, category: "rooms" },
   { src: "/images/rooms/super-deluxe/bed-dressed.jpg", width: 1600, height: 1200, category: "rooms" },
-  { src: "/images/rooms/deluxe/bed-balcony.jpg", width: 1600, height: 1200, category: "rooms" },
-  { src: "/images/rooms/deluxe/desk-tv.jpg", width: 1600, height: 1200, category: "rooms" },
+  { src: "/images/rooms/deluxe/bed-marble.jpg", width: 1600, height: 1025, category: "rooms" },
+  { src: "/images/rooms/deluxe/desk-wardrobe.jpg", width: 1600, height: 1025, category: "rooms" },
+  { src: "/images/rooms/deluxe/tv-wall.jpg", width: 1600, height: 1025, category: "rooms" },
+  { src: "/images/rooms/deluxe/bed-angled.jpg", width: 1600, height: 1025, category: "rooms" },
+  { src: "/images/rooms/deluxe/room-overview.jpg", width: 1600, height: 1025, category: "rooms" },
+  { src: "/images/interior/corridor-303.jpg", width: 1200, height: 1425, category: "interior" },
+  { src: "/images/interior/corridor-307.jpg", width: 1200, height: 1425, category: "interior" },
+  { src: "/images/interior/corridor-lounge.jpg", width: 1200, height: 1425, category: "interior" },
+  { src: "/images/interior/bathroom-vanity.jpg", width: 1200, height: 1425, category: "interior" },
+  { src: "/images/interior/bathroom-shower.jpg", width: 1200, height: 1425, category: "interior" },
+  { src: "/images/dining/dining-hall.jpg", width: 1600, height: 1025, category: "dining" },
 ];

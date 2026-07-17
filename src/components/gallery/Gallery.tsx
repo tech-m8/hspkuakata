@@ -6,7 +6,7 @@ import { gallery, type GalleryCategory, type GalleryItem } from "@/data/gallery"
 import type { Dictionary } from "@/i18n/getDictionary";
 import { makeTranslator } from "@/i18n/t";
 
-const categories: ("all" | GalleryCategory)[] = ["all", "exterior", "rooms", "signage"];
+const categories: ("all" | GalleryCategory)[] = ["all", "exterior", "rooms", "interior", "dining", "signage"];
 
 export function Gallery({ dict }: { dict: Dictionary }) {
   const t = useMemo(() => makeTranslator(dict), [dict]);

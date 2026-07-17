@@ -105,11 +105,13 @@
   },
   "gallery": {
     "pageTitle": "Gallery",
-    "pageSubtitle": "Photos of the building, signage and rooms.",
+    "pageSubtitle": "Photos of the building, signage, rooms, interior and dining area.",
     "filters": {
       "all": "All",
       "exterior": "Exterior",
       "rooms": "Rooms",
+      "interior": "Interior",
+      "dining": "Dining",
       "signage": "Signage"
     },
     "open": "Open photo",

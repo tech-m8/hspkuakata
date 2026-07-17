@@ -76,15 +76,21 @@ export const rooms: Room[] = [
     netBdt: 2643,
     images: [
       {
-        src: "/images/rooms/deluxe/bed-balcony.jpg",
+        src: "/images/rooms/deluxe/bed-marble.jpg",
         width: 1600,
-        height: 1200,
+        height: 1025,
         altKey: "rooms.deluxe.name",
       },
       {
-        src: "/images/rooms/deluxe/desk-tv.jpg",
+        src: "/images/rooms/deluxe/desk-wardrobe.jpg",
         width: 1600,
-        height: 1200,
+        height: 1025,
+        altKey: "rooms.deluxe.name",
+      },
+      {
+        src: "/images/rooms/deluxe/tv-wall.jpg",
+        width: 1600,
+        height: 1025,
         altKey: "rooms.deluxe.name",
       },
     ],

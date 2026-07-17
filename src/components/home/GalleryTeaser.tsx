@@ -6,7 +6,7 @@ import type { Translator } from "@/i18n/t";
 const teaser = [
   { src: "/images/exterior/facade-day.jpg", w: 1200, h: 1600 },
   { src: "/images/rooms/family-deluxe/twin-bed-marble.jpg", w: 1600, h: 1200 },
-  { src: "/images/rooms/deluxe/bed-balcony.jpg", w: 1600, h: 1200 },
+  { src: "/images/rooms/deluxe/bed-marble.jpg", w: 1600, h: 1025 },
   { src: "/images/exterior/street-view.jpg", w: 1200, h: 1600 },
 ];
 

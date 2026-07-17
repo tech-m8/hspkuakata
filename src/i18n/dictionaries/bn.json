@@ -105,11 +105,13 @@
   },
   "gallery": {
     "pageTitle": "গ্যালারি",
-    "pageSubtitle": "ভবন, সাইনেজ ও কক্ষের ছবি।",
+    "pageSubtitle": "ভবন, সাইনেজ, কক্ষ, অন্দর ও ডাইনিং এলাকার ছবি।",
     "filters": {
       "all": "সব",
       "exterior": "ভবন",
       "rooms": "রুম",
+      "interior": "অন্দর",
+      "dining": "ডাইনিং",
       "signage": "সাইনেজ"
     },
     "open": "ছবি খুলুন",
