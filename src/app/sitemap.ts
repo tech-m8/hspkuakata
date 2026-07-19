@@ -4,7 +4,7 @@ import { locales } from "@/i18n/locales";
 
 export const dynamic = "force-static";
 
-const pages = ["", "rooms", "amenities", "gallery", "location", "contact"];
+const pages = ["", "rooms", "amenities", "gallery", "location", "contact", "feedback"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = hotel.website.replace(/\/$/, "");

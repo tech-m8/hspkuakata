@@ -11,6 +11,7 @@
     "gallery": "Gallery",
     "location": "Location",
     "contact": "Contact",
+    "feedback": "Feedback",
     "bookNow": "Book Now"
   },
   "home": {
@@ -156,6 +157,10 @@
       "fallbackNote": "Prefer email? Write to {{email}}."
     },
     "whatsappPrefill": "Hello, I'd like to make a booking inquiry for Hotel Silver Pearl."
+  },
+  "feedback": {
+    "pageTitle": "Share your feedback",
+    "pageSubtitle": "Stayed with us? Tell us how your visit went — it takes a minute and helps us improve."
   },
   "footer": {
     "rights": "All rights reserved.",

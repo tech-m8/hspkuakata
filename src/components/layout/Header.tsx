@@ -15,6 +15,7 @@ export function Header({ locale, t }: { locale: Locale; t: Translator }) {
     { href: `${base}/gallery`, label: t("nav.gallery") },
     { href: `${base}/location`, label: t("nav.location") },
     { href: `${base}/contact`, label: t("nav.contact") },
+    { href: `${base}/feedback`, label: t("nav.feedback") },
   ];
   const cta = { href: `${base}/contact`, label: t("nav.bookNow") };
 
