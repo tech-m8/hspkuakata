@@ -30,10 +30,10 @@ export const rooms: Room[] = [
     summaryKey: "rooms.familyDeluxe.summary",
     guests: 3,
     baseBdt: 4000,
-    discountBdt: 1000,
-    serviceBdt: 75,
-    vatBdt: 461.25,
-    netBdt: 3536,
+    discountBdt: 1200,
+    serviceBdt: 70,
+    vatBdt: 430.5,
+    netBdt: 3301,
     images: [
       {
         src: "/images/rooms/family-deluxe/twin-bed-marble.jpg",
@@ -50,10 +50,10 @@ export const rooms: Room[] = [
     summaryKey: "rooms.superDeluxe.summary",
     guests: 2,
     baseBdt: 3500,
-    discountBdt: 875,
-    serviceBdt: 65,
-    vatBdt: 403.6,
-    netBdt: 3094,
+    discountBdt: 1050,
+    serviceBdt: 61.25,
+    vatBdt: 376.69,
+    netBdt: 2888,
     images: [
       {
         src: "/images/rooms/super-deluxe/bed-dressed.jpg",
@@ -70,10 +70,10 @@ export const rooms: Room[] = [
     summaryKey: "rooms.deluxe.summary",
     guests: 2,
     baseBdt: 3000,
-    discountBdt: 750,
-    serviceBdt: 56.25,
-    vatBdt: 337.5,
-    netBdt: 2643,
+    discountBdt: 900,
+    serviceBdt: 52.5,
+    vatBdt: 322.88,
+    netBdt: 2475,
     images: [
       {
         src: "/images/rooms/deluxe/bed-marble.jpg",

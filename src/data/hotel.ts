@@ -8,7 +8,7 @@ export const hotel = {
   whatsapp: "8801942704560",
   website: "https://hspkuakata.com",
   coordinates: { lat: 21.8204, lng: 90.11816 },
-  priceRangeBdt: { min: 2643, max: 3536 },
+  priceRangeBdt: { min: 2475, max: 3301 },
 } as const;
 
 export type HotelInfo = typeof hotel;

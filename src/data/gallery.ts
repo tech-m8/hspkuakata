@@ -1,4 +1,4 @@
-export type GalleryCategory = "exterior" | "rooms" | "interior" | "dining" | "signage";
+export type GalleryCategory = "exterior" | "reception" | "rooms" | "interior" | "dining" | "signage";
 
 export type GalleryItem = {
   src: string;
@@ -14,6 +14,8 @@ export const gallery: GalleryItem[] = [
   { src: "/images/exterior/facade-day.jpg", width: 1200, height: 1600, category: "exterior" },
   { src: "/images/exterior/street-view.jpg", width: 1200, height: 1600, category: "exterior" },
   { src: "/images/signage/entrance-sign.jpg", width: 1102, height: 826, category: "signage" },
+  { src: "/images/reception/lobby-lounge.jpg", width: 960, height: 1280, category: "reception" },
+  { src: "/images/reception/front-desk.jpg", width: 960, height: 1280, category: "reception" },
   { src: "/images/rooms/family-deluxe/twin-bed-marble.jpg", width: 1600, height: 1200, category: "rooms" },
   { src: "/images/rooms/super-deluxe/bed-dressed.jpg", width: 1600, height: 1200, category: "rooms" },
   { src: "/images/rooms/deluxe/bed-marble.jpg", width: 1600, height: 1025, category: "rooms" },

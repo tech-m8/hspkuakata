@@ -47,7 +47,7 @@
     "hideBreakdown": "Hide price breakdown",
     "breakdown": {
       "base": "Base rate",
-      "discount": "Discount (25%)",
+      "discount": "Discount (30%)",
       "service": "Service charge (2.5%)",
       "vat": "VAT (15%)",
       "net": "Net total"
@@ -106,10 +106,11 @@
   },
   "gallery": {
     "pageTitle": "Gallery",
-    "pageSubtitle": "Photos of the building, signage, rooms, interior and dining area.",
+    "pageSubtitle": "Photos of the building, signage, reception, rooms, interior and dining area.",
     "filters": {
       "all": "All",
       "exterior": "Exterior",
+      "reception": "Reception",
       "rooms": "Rooms",
       "interior": "Interior",
       "dining": "Dining",
