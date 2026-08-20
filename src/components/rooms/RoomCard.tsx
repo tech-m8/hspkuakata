@@ -4,7 +4,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { AmenityIcon } from "@/components/AmenityIcon";
 import { PriceBreakdown } from "./PriceBreakdown";
 import type { Room } from "@/data/rooms";
-import { formatBdt } from "@/lib/format";
+import { formatBdt, formatNumber } from "@/lib/format";
 import type { Locale } from "@/i18n/locales";
 import type { Translator } from "@/i18n/t";
 
@@ -52,7 +52,7 @@ export function RoomCard({
               {t(room.nameKey)}
             </h3>
             <p className="mt-1 text-sm text-(--color-ink)/70">
-              {t("rooms.guestsLabel", { count: room.guests })}
+              {t("rooms.guestsLabel", { count: formatNumber(room.guests, locale) })}
             </p>
           </div>
           <div className="text-right shrink-0">

@@ -39,7 +39,8 @@
   "rooms": {
     "pageTitle": "Rooms & Tariff",
     "pageSubtitle": "All rates are per room, per night, in Bangladeshi Taka. Net amount already includes the discount, service charge and VAT.",
-    "validity": "Rate chart valid till November 2026.",
+    "tariffNote": "Tariff / room rent is set at a 30% discount, with 15% VAT and 2.5% service charge.",
+    "validity": "Offer valid till 20 November 2026.",
     "guestsLabel": "Up to {{count}} guests",
     "perNight": "per night",
     "netAmount": "Net amount",

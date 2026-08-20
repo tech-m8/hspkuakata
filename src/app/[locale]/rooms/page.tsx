@@ -40,7 +40,10 @@ export default async function RoomsPage({
         title={t("rooms.pageTitle")}
         subtitle={t("rooms.pageSubtitle")}
       />
-      <p className="-mt-6 mb-10 text-sm text-(--color-ink)/60">{t("rooms.validity")}</p>
+      <div className="-mt-6 mb-10 rounded-xl bg-(--color-gold-500)/10 ring-1 ring-(--color-gold-500)/25 px-4 py-3">
+        <p className="text-sm text-(--color-navy-800)">{t("rooms.tariffNote")}</p>
+        <p className="mt-1 text-sm text-(--color-ink)/60">{t("rooms.validity")}</p>
+      </div>
 
       <div className="space-y-10">
         {rooms.map((room) => (

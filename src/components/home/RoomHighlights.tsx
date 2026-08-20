@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { rooms } from "@/data/rooms";
-import { formatBdt } from "@/lib/format";
+import { formatBdt, formatNumber } from "@/lib/format";
 import { Button } from "@/components/ui/Button";
 import type { Locale } from "@/i18n/locales";
 import type { Translator } from "@/i18n/t";
@@ -36,7 +36,7 @@ export function RoomHighlights({
             <div className="p-6">
               <h3 className="text-2xl text-(--color-navy-800)">{t(room.nameKey)}</h3>
               <p className="mt-1 text-sm text-(--color-ink)/70">
-                {t("rooms.guestsLabel", { count: room.guests })}
+                {t("rooms.guestsLabel", { count: formatNumber(room.guests, locale) })}
               </p>
               <div className="mt-4 flex items-baseline gap-2">
                 <span className="text-2xl font-display text-(--color-navy-800)">
