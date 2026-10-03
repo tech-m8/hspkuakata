@@ -217,6 +217,14 @@ export function KuakataPlanningArticle({ locale, post }: { locale: Locale; post:
           <p>{bn ? `এই প্রকাশিত অফারের মেয়াদ ${tariffValidUntil} পর্যন্ত; বর্তমান ভাড়া বুকিংয়ের আগে নিশ্চিত করুন।` : `These published offer rates are valid through ${tariffValidUntil}; confirm current pricing before booking.`}</p>
         </section>}
       </div>
+      {post === "family" && <nav aria-label={bn ? "সম্পর্কিত পারিবারিক ভ্রমণ গাইড" : "Related Kuakata family travel guides"} className="mt-10 rounded-2xl bg-(--color-sand-100) p-6">
+        <h2 className="font-display text-xl text-(--color-navy-800)">{bn ? "সম্পর্কিত কুয়াকাটা পারিবারিক গাইড" : "Related Kuakata family guides"}</h2>
+        <ul className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+          <li><Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/kuakata-with-children`}>{bn ? "শিশুদের নিয়ে কুয়াকাটায় কার্যক্রম ও ব্যবহারিক টিপস" : "Kuakata with children: activities and practical tips"}</Link></li>
+          <li><Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/kuakata-family-hotel-guide`}>{bn ? "পরিবারের জন্য কুয়াকাটা হোটেল গাইড" : "Kuakata hotel guide for families"}</Link></li>
+          <li><Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/kuakata-weekend-itinerary`}>{bn ? "২ দিন ১ রাতের কুয়াকাটা ভ্রমণসূচি" : "Kuakata weekend itinerary: 2 days and 1 night"}</Link></li>
+        </ul>
+      </nav>}
       <section className="mt-12 rounded-2xl bg-(--color-navy-800) p-7 text-white md:p-9">
         <h2 className="font-display text-2xl">{bn ? "কুয়াকাটা ভ্রমণের পরিকল্পনা করুন" : "Plan your Kuakata stay"}</h2>
         <p className="mt-3 max-w-2xl leading-relaxed text-white/75">{bn ? "Hotel Silver Pearl-এ সৈকত থেকে অল্প হাঁটার দূরত্বে রুম, বুফে নাশতা, ফ্রি ওয়াই-ফাই ও গাড়ি পার্কিং রয়েছে। তারিখের প্রাপ্যতা ও মোট ভাড়া নিশ্চিত করুন।" : "Hotel Silver Pearl offers rooms a short walk from the beach, buffet breakfast, free Wi-Fi, and car parking. Confirm availability and the total rate for your dates."}</p>

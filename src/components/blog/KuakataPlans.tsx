@@ -11,10 +11,10 @@ export function KuakataPlans({ locale, post }: { locale: Locale; post: Post }) {
   const isItinerary = post === "itinerary";
   const title = bn
     ? isItinerary ? "কুয়াকাটায় ২ দিনের ভ্রমণ পরিকল্পনা" : "কুয়াকাটার দর্শনীয় স্থান ও সৈকত ভ্রমণ গাইড"
-    : isItinerary ? "Kuakata 2-Day Itinerary: A Relaxed Weekend Plan" : "Kuakata Attractions and Beach Guide";
+    : isItinerary ? "Kuakata 2-Day Itinerary: A Relaxed Two-Night Plan" : "Kuakata Attractions and Beach Guide";
   const description = bn
     ? isItinerary ? "দুই দিনে কুয়াকাটা সৈকত, সূর্যোদয়-সূর্যাস্ত ও কাছের দর্শনীয় স্থান ঘুরে দেখার নমনীয় পরিকল্পনা।" : "কুয়াকাটা সৈকত, ঝাউবন, গঙ্গামতি, ফাতরার চর ও রাখাইন ঐতিহ্য ঘোরার ব্যবহারিক নির্দেশনা।"
-    : isItinerary ? "Plan two days in Kuakata with time for the beach, sunrise and sunset, local food, and nearby sights." : "A practical guide to Kuakata Sea Beach, Jhau Forest, Gangamati, Fatrar Char, and local Rakhine heritage.";
+    : isItinerary ? "Plan two full days in Kuakata with two nights for the beach, sunrise and sunset, local food, and nearby sights." : "A practical guide to Kuakata Sea Beach, Jhau Forest, Gangamati, Fatrar Char, and local Rakhine heritage.";
   const url = `${hotel.website.replace(/\/$/, "")}/${locale}/blog/${slugs[post]}/`;
   return <article lang={bn ? "bn" : "en"}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -55,7 +55,7 @@ export function KuakataPlans({ locale, post }: { locale: Locale; post: Post }) {
         </ul>
         <p className="mt-4 text-xs leading-relaxed text-(--color-ink)/55">{bn ? "আবহাওয়া, জোয়ার, নৌযান ও স্থানীয় যাতায়াত বদলাতে পারে। বের হওয়ার আগে স্থানীয়ভাবে অবস্থা ও নিরাপত্তা নির্দেশনা জেনে নিন।" : "Weather, tides, boats, and local transport can change. Check current conditions and safety guidance locally before setting out."}</p>
       </aside>
-      <p className="mt-8 text-sm text-(--color-ink)/65">{bn ? "আরও তথ্যের জন্য " : "For more planning details, read the "}<Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/${slugs[isItinerary ? "attractions" : "itinerary"]}`}>{bn ? (isItinerary ? "দর্শনীয় স্থান ও সৈকত গাইড" : "২ দিনের ভ্রমণ পরিকল্পনা") : (isItinerary ? "attractions and beach guide" : "2-day itinerary")}</Link>.</p>
+      <p className="mt-8 text-sm text-(--color-ink)/65">{bn ? "আরও তথ্যের জন্য " : "For more planning details, read the "}<Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/${slugs[isItinerary ? "attractions" : "itinerary"]}`}>{bn ? (isItinerary ? "দর্শনীয় স্থান ও সৈকত গাইড" : "২ দিনের ভ্রমণ পরিকল্পনা") : (isItinerary ? "Kuakata attractions and beach guide" : "full two-day Kuakata itinerary")}</Link>{isItinerary && <> {bn ? "অথবা স্বল্প সফরের " : " or use the "}<Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/kuakata-weekend-itinerary`}>{bn ? "২ দিন ১ রাতের উইকএন্ড পরিকল্পনা" : "Kuakata weekend itinerary for 2 days and 1 night"}</Link></>}. {bn ? "থাকার এলাকা বাছতে " : "To choose where to stay in Kuakata, see "}<Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/where-to-stay-in-kuakata-areas`}>{bn ? "এলাকা ও কাছের দর্শনীয় স্থানের গাইড" : "our area and nearby attractions guide"}</Link>.</p>
     </Container>
   </article>;
 }

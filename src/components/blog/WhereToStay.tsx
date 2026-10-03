@@ -5,7 +5,7 @@ import type { Locale } from "@/i18n/locales";
 
 export function WhereToStay({ locale }: { locale: Locale }) {
   const bn = locale === "bn";
-  const title = bn ? "কুয়াকাটায় কোথায় থাকবেন: হোটেল বাছাইয়ের সহজ গাইড" : "Where to Stay in Kuakata: A Practical Guide to Choosing a Hotel";
+  const title = bn ? "কুয়াকাটায় হোটেল বাছাই: থাকার ব্যবহারিক গাইড" : "Choosing a Hotel in Kuakata: A Practical Stay Guide";
   const description = bn
     ? "কুয়াকাটায় থাকার জায়গা বাছাইয়ের আগে সৈকতের দূরত্ব, রুম, খাবার, পার্কিং ও বুকিংয়ের শর্ত কীভাবে যাচাই করবেন জানুন।"
     : "Choose where to stay in Kuakata by comparing beach access, room needs, meals, parking, and booking terms before you reserve.";
@@ -41,7 +41,7 @@ export function WhereToStay({ locale }: { locale: Locale }) {
             <Link className="rounded-full border border-white/30 px-5 py-3 text-sm text-white hover:bg-white/10" href={`/${locale}/contact`}>{bn ? "যোগাযোগ করুন" : "Contact the hotel"}</Link>
           </div>
         </section>
-        <p className="mt-8 text-sm text-(--color-ink)/65">{bn ? "আরও পরিকল্পনার জন্য " : "For more trip planning, read the "}<Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/kuakata-travel-guide`}>{bn ? "কুয়াকাটা ভ্রমণ গাইড" : "complete Kuakata travel guide"}</Link>.</p>
+        <p className="mt-8 text-sm text-(--color-ink)/65">{bn ? "কুয়াকাটায় থাকার এলাকা, সৈকতের পথ ও বুকিংয়ের প্রশ্ন নিয়ে আরও পড়ুন: " : "Continue planning your Kuakata stay with our guides to "}<Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/where-to-stay-in-kuakata-areas`}>{bn ? "এলাকা ও কাছের দর্শনীয় স্থান" : "areas and nearby attractions"}</Link>, <Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/how-to-choose-hotel-kuakata`}>{bn ? "হোটেল বাছাই" : "choosing a Kuakata hotel"}</Link>, <Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/questions-to-ask-before-booking-kuakata-hotel`}>{bn ? "বুকিংয়ের আগে প্রশ্ন" : "questions to ask before booking"}</Link> {bn ? "এবং " : "and the "}<Link className="underline decoration-(--color-gold-500) underline-offset-4" href={`/${locale}/blog/kuakata-travel-guide`}>{bn ? "সম্পূর্ণ কুয়াকাটা ভ্রমণ গাইড" : "complete Kuakata travel guide"}</Link>.</p>
       </Container>
     </article>
   );

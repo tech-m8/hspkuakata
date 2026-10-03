@@ -63,6 +63,17 @@ export function sitemapEntries(): MetadataRoute.Sitemap {
     "day-trips-from-kuakata",
     "kuakata-with-children",
     "kuakata-local-food-guide",
+    "kuakata-travel-tips-first-time-visitors",
+    "kuakata-holiday-travel-planning",
+    "kuakata-monsoon-travel-guide",
+    "kuakata-accessibility-mobility-guide",
+    "kuakata-travel-faqs",
+    "where-to-stay-in-kuakata-areas",
+    "how-to-choose-hotel-kuakata",
+    "kuakata-family-hotel-guide",
+    "kuakata-accommodation-couples-groups",
+    "hotel-near-kuakata-beach",
+    "questions-to-ask-before-booking-kuakata-hotel",
   ];
   const posts = postSlugs.flatMap((slug) => {
     const alternates = Object.fromEntries(locales.map((locale) => [locale, absoluteUrl(`/${locale}/blog/${slug}/`)]));
