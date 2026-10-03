@@ -57,6 +57,12 @@ export function sitemapEntries(): MetadataRoute.Sitemap {
     "kuakata-family-trip-guide",
     "kuakata-travel-checklist",
     "kuakata-trip-budget",
+    "kuakata-attractions-time-guide",
+    "kuakata-sunrise-sunset-guide",
+    "kuakata-beach-guide",
+    "day-trips-from-kuakata",
+    "kuakata-with-children",
+    "kuakata-local-food-guide",
   ];
   const posts = postSlugs.flatMap((slug) => {
     const alternates = Object.fromEntries(locales.map((locale) => [locale, absoluteUrl(`/${locale}/blog/${slug}/`)]));

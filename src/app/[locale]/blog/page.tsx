@@ -28,6 +28,14 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
     { slug: "kuakata-travel-checklist", title: bn ? "কুয়াকাটা ভ্রমণ চেকলিস্ট" : "Kuakata Travel Checklist", description: bn ? "সৈকত, আবহাওয়া ও সড়কযাত্রার জন্য কী নেবেন।" : "What to pack for beach days, coastal weather, and the road." },
     { slug: "kuakata-trip-budget", title: bn ? "কুয়াকাটা ভ্রমণের আনুমানিক বাজেট" : "Estimated Kuakata Trip Budget", description: bn ? "দম্পতি, পরিবার ও দলের জন্য নমুনা খরচের হিসাব।" : "Sample cost estimates for couples, families, and groups." },
   ];
+  const experienceArticles = [
+    { slug: "kuakata-attractions-time-guide", title: bn ? "কুয়াকাটার দর্শনীয় স্থান: কী দেখবেন ও কত সময় রাখবেন" : "Kuakata Attractions: What to See and How Much Time to Allow", description: bn ? "প্রতিটি স্থানের জন্য আনুমানিক সময়সহ ঘোরার পরিকল্পনা।" : "Plan your stops with practical visit-time estimates." },
+    { slug: "kuakata-sunrise-sunset-guide", title: bn ? "কুয়াকাটায় সূর্যোদয় ও সূর্যাস্ত" : "Sunrise and Sunset at Kuakata", description: bn ? "দেখার স্থান, সময় ও আবহাওয়া নিয়ে পরিকল্পনা করুন।" : "Plan viewpoints, timing, weather checks, and photography." },
+    { slug: "kuakata-beach-guide", title: bn ? "কুয়াকাটা সৈকত গাইড" : "Kuakata Beach Guide", description: bn ? "কী করবেন, কীভাবে যাবেন এবং নিরাপদে ঘোরার টিপস।" : "Activities, access, safety, and practical visitor tips." },
+    { slug: "day-trips-from-kuakata", title: bn ? "কুয়াকাটা থেকে এক দিনের ভ্রমণ" : "Day Trips from Kuakata", description: bn ? "কাছের উপকূল, বন, গ্রাম ও স্থানীয় আকর্ষণ ঘুরুন।" : "Consider nearby coastal, forest, village, and local stops." },
+    { slug: "kuakata-with-children", title: bn ? "শিশুদের নিয়ে কুয়াকাটা ভ্রমণ" : "Kuakata with Children", description: bn ? "পরিবারের জন্য কার্যক্রম, নিরাপত্তা ও ব্যবহারিক পরামর্শ।" : "Family activities, beach safety, and practical planning tips." },
+    { slug: "kuakata-local-food-guide", title: bn ? "কুয়াকাটার স্থানীয় খাবার" : "Local Food in Kuakata", description: bn ? "সামুদ্রিক খাবার, শুঁটকি ও খাবার বাছাইয়ের পরামর্শ।" : "Seafood, dried fish, and dining advice for visitors." },
+  ];
 
   return (
     <Section>
@@ -90,6 +98,12 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
           <span className="mt-6 inline-block text-sm font-medium text-(--color-navy-800) underline decoration-(--color-gold-500) underline-offset-4">{bn ? "গাইড পড়ুন →" : "Read the guide →"}</span>
         </Link>
         {planningArticles.map((article) => <Link key={article.slug} href={`/${locale}/blog/${article.slug}`} className="group block rounded-3xl bg-white p-7 ring-1 ring-(--color-navy-800)/10 transition hover:-translate-y-0.5 hover:shadow-lg md:p-9">
+          <p className="text-xs uppercase tracking-[0.16em] text-(--color-gold-600)">{bn ? "কুয়াকাটা ভ্রমণ গাইড" : "Kuakata travel guide"}</p>
+          <h2 className="mt-3 font-display text-3xl text-(--color-navy-800) group-hover:text-(--color-gold-600)">{article.title}</h2>
+          <p className="mt-4 leading-relaxed text-(--color-ink)/75">{article.description}</p>
+          <span className="mt-6 inline-block text-sm font-medium text-(--color-navy-800) underline decoration-(--color-gold-500) underline-offset-4">{bn ? "গাইড পড়ুন →" : "Read the guide →"}</span>
+        </Link>)}
+        {experienceArticles.map((article) => <Link key={article.slug} href={`/${locale}/blog/${article.slug}`} className="group block rounded-3xl bg-white p-7 ring-1 ring-(--color-navy-800)/10 transition hover:-translate-y-0.5 hover:shadow-lg md:p-9">
           <p className="text-xs uppercase tracking-[0.16em] text-(--color-gold-600)">{bn ? "কুয়াকাটা ভ্রমণ গাইড" : "Kuakata travel guide"}</p>
           <h2 className="mt-3 font-display text-3xl text-(--color-navy-800) group-hover:text-(--color-gold-600)">{article.title}</h2>
           <p className="mt-4 leading-relaxed text-(--color-ink)/75">{article.description}</p>
