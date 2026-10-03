@@ -23,12 +23,7 @@ export function Hero({ locale, t }: { locale: Locale; t: Translator }) {
       <Container className="py-28 sm:py-36 lg:py-44">
         <div className="max-w-2xl text-white">
           <h1>
-            {/* Wide tracking splits Bengali conjuncts apart, so only apply it to Latin text. */}
-            <span
-              className={`block font-body font-normal text-xs sm:text-sm text-(--color-gold-300) mb-4 ${
-                locale === "bn" ? "" : "uppercase tracking-[0.25em]"
-              }`}
-            >
+            <span className="block font-body font-normal text-xs sm:text-sm uppercase tracking-[0.25em] bn:tracking-normal text-(--color-gold-300) mb-4">
               {t("home.heroEyebrow")}
             </span>
             <span className="block text-4xl sm:text-5xl lg:text-6xl leading-[1.1] font-display">

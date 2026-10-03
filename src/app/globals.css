@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Styles for the Bengali locale, e.g. `bn:tracking-normal` (wide tracking splits conjuncts apart). */
+@custom-variant bn (&:where(html[lang="bn"] *));
+
 @theme {
   --color-navy-50: #eef2f9;
   --color-navy-100: #d6dfee;

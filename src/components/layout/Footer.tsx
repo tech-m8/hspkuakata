@@ -20,7 +20,7 @@ export function Footer({ locale, t }: { locale: Locale; t: Translator }) {
           </p>
         </div>
         <div>
-          <h3 className="text-sm uppercase tracking-[0.2em] text-(--color-gold-300) mb-4">
+          <h3 className="text-sm uppercase tracking-[0.2em] bn:tracking-normal text-(--color-gold-300) mb-4">
             {t("contact.channelsTitle")}
           </h3>
           <ul className="space-y-2 text-sm">
@@ -53,7 +53,7 @@ export function Footer({ locale, t }: { locale: Locale; t: Translator }) {
           </ul>
         </div>
         <div>
-          <h3 className="text-sm uppercase tracking-[0.2em] text-(--color-gold-300) mb-4">
+          <h3 className="text-sm uppercase tracking-[0.2em] bn:tracking-normal text-(--color-gold-300) mb-4">
             {t("nav.home")}
           </h3>
           <ul className="space-y-2 text-sm">

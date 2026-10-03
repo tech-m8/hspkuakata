@@ -14,7 +14,7 @@ export function LocationPreview({
   return (
     <div className="grid lg:grid-cols-2 gap-10 items-center">
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-(--color-gold-500) mb-3">
+        <p className="text-xs uppercase tracking-[0.2em] bn:tracking-normal text-(--color-gold-500) mb-3">
           {t("nav.location")}
         </p>
         <h2 className="text-3xl sm:text-4xl text-(--color-navy-800) leading-tight">
