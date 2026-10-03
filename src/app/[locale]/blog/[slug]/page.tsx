@@ -15,7 +15,7 @@ const staySlug = "where-to-stay-in-kuakata";
 const itinerarySlug = "kuakata-2-day-itinerary";
 const attractionsSlug = "kuakata-attractions-and-beach-guide";
 const postSlugs = [slug, staySlug, itinerarySlug, attractionsSlug] as const;
-const allPostSlugs = [...postSlugs, ...Object.values(planningPosts), ...Object.values(experiencePosts), ...Object.values(practicalPosts), ...Object.values(accommodationPosts)];
+const allPostSlugs: string[] = [...postSlugs, ...Object.values(planningPosts), ...Object.values(experiencePosts), ...Object.values(practicalPosts), ...Object.values(accommodationPosts)];
 export function generateStaticParams() {
   return locales.flatMap((locale) => allPostSlugs.map((postSlug) => ({ locale, slug: postSlug })));
 }
