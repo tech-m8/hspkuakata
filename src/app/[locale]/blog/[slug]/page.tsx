@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { TravelGuide } from "@/components/blog/TravelGuide";
 import { WhereToStay } from "@/components/blog/WhereToStay";
 import { KuakataPlans } from "@/components/blog/KuakataPlans";
+import { getPlanningPost, KuakataPlanningArticle, planningPosts } from "@/components/blog/KuakataPlanningArticles";
 import { hotel } from "@/data/hotel";
 import { isLocale, locales, type Locale } from "@/i18n/locales";
 
@@ -11,13 +12,34 @@ const staySlug = "where-to-stay-in-kuakata";
 const itinerarySlug = "kuakata-2-day-itinerary";
 const attractionsSlug = "kuakata-attractions-and-beach-guide";
 const postSlugs = [slug, staySlug, itinerarySlug, attractionsSlug] as const;
+const allPostSlugs = [...postSlugs, ...Object.values(planningPosts)];
 export function generateStaticParams() {
-  return locales.flatMap((locale) => postSlugs.map((postSlug) => ({ locale, slug: postSlug })));
+  return locales.flatMap((locale) => allPostSlugs.map((postSlug) => ({ locale, slug: postSlug })));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug: currentSlug } = await params;
-  if (!isLocale(locale) || !postSlugs.includes(currentSlug as (typeof postSlugs)[number])) return {};
+  if (!isLocale(locale) || !allPostSlugs.includes(currentSlug)) return {};
+  const planningPost = getPlanningPost(locale, currentSlug);
+  if (planningPost) {
+    const path = `/${locale}/blog/${currentSlug}/`;
+    const languages = Object.fromEntries(locales.map((item) => [item, `/${item}/blog/${currentSlug}/`]));
+    return {
+      title: planningPost.title,
+      description: planningPost.description,
+      alternates: { canonical: path, languages: { ...languages, "x-default": `/${locales[0]}/blog/${currentSlug}/` } },
+      openGraph: {
+        type: "article",
+        title: planningPost.title,
+        description: planningPost.description,
+        url: `${hotel.website.replace(/\/$/, "")}${path}`,
+        siteName: "Hotel Silver Pearl Kuakata",
+        locale: locale === "bn" ? "bn_BD" : "en_US",
+        publishedTime: "2026-10-03T00:00:00+06:00",
+        modifiedTime: "2026-10-03T00:00:00+06:00",
+      },
+    };
+  }
   const postSlug = currentSlug;
   const postContent: Record<string, { titles: Record<Locale, string>; descriptions: Record<Locale, string> }> = {
     [staySlug]: {
@@ -74,9 +96,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function TravelGuidePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug: currentSlug } = await params;
-  if (!isLocale(locale) || !postSlugs.includes(currentSlug as (typeof postSlugs)[number])) notFound();
+  if (!isLocale(locale) || !allPostSlugs.includes(currentSlug)) notFound();
   if (currentSlug === staySlug) return <WhereToStay locale={locale} />;
   if (currentSlug === itinerarySlug) return <KuakataPlans locale={locale} post="itinerary" />;
   if (currentSlug === attractionsSlug) return <KuakataPlans locale={locale} post="attractions" />;
+  const planningPost = (Object.keys(planningPosts) as (keyof typeof planningPosts)[]).find((key) => planningPosts[key] === currentSlug);
+  if (planningPost) return <KuakataPlanningArticle locale={locale} post={planningPost} />;
   return <TravelGuide locale={locale} />;
 }

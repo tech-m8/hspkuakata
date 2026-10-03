@@ -20,6 +20,14 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const bn = locale === "bn";
+  const planningArticles = [
+    { slug: "best-time-to-visit-kuakata", title: bn ? "কুয়াকাটা ভ্রমণের সেরা সময়" : "Best Time to Visit Kuakata", description: bn ? "আবহাওয়া, ভিড় ও ঋতু বুঝে ভ্রমণের তারিখ ঠিক করুন।" : "Choose your dates around weather, crowds, and seasonal conditions." },
+    { slug: "dhaka-to-kuakata", title: bn ? "ঢাকা থেকে কুয়াকাটা যাওয়ার উপায়" : "How to Get to Kuakata from Dhaka", description: bn ? "বাস, সড়কপথ, লঞ্চ ও যাত্রা পরিকল্পনার পরামর্শ।" : "Compare bus, road, and launch-plus-road options." },
+    { slug: "kuakata-weekend-itinerary", title: bn ? "কুয়াকাটা উইকএন্ড ভ্রমণ: ২ দিন ১ রাত" : "Kuakata Weekend Itinerary: 2 Days and 1 Night", description: bn ? "স্বল্প সময়ে সৈকত ও কাছের দর্শনীয় স্থান ঘোরার পরিকল্পনা।" : "A practical short-stay plan for the beach and nearby sights." },
+    { slug: "kuakata-family-trip-guide", title: bn ? "পরিবার নিয়ে কুয়াকাটা ভ্রমণ গাইড" : "Kuakata Family Trip Guide", description: bn ? "যাতায়াত, রুম, শিশুদের নিরাপত্তা ও খাবারের প্রস্তুতি।" : "Plan transport, rooms, child safety, meals, and essentials." },
+    { slug: "kuakata-travel-checklist", title: bn ? "কুয়াকাটা ভ্রমণ চেকলিস্ট" : "Kuakata Travel Checklist", description: bn ? "সৈকত, আবহাওয়া ও সড়কযাত্রার জন্য কী নেবেন।" : "What to pack for beach days, coastal weather, and the road." },
+    { slug: "kuakata-trip-budget", title: bn ? "কুয়াকাটা ভ্রমণের আনুমানিক বাজেট" : "Estimated Kuakata Trip Budget", description: bn ? "দম্পতি, পরিবার ও দলের জন্য নমুনা খরচের হিসাব।" : "Sample cost estimates for couples, families, and groups." },
+  ];
 
   return (
     <Section>
@@ -81,6 +89,12 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
           <p className="mt-4 leading-relaxed text-(--color-ink)/75">{bn ? "সৈকত, ঝাউবন, গঙ্গামতি, ফাতরার চর ও রাখাইন ঐতিহ্য ঘোরার তথ্য।" : "Plan visits to the beach, Jhau Forest, Gangamati, Fatrar Char, and Rakhine heritage sites."}</p>
           <span className="mt-6 inline-block text-sm font-medium text-(--color-navy-800) underline decoration-(--color-gold-500) underline-offset-4">{bn ? "গাইড পড়ুন →" : "Read the guide →"}</span>
         </Link>
+        {planningArticles.map((article) => <Link key={article.slug} href={`/${locale}/blog/${article.slug}`} className="group block rounded-3xl bg-white p-7 ring-1 ring-(--color-navy-800)/10 transition hover:-translate-y-0.5 hover:shadow-lg md:p-9">
+          <p className="text-xs uppercase tracking-[0.16em] text-(--color-gold-600)">{bn ? "কুয়াকাটা ভ্রমণ গাইড" : "Kuakata travel guide"}</p>
+          <h2 className="mt-3 font-display text-3xl text-(--color-navy-800) group-hover:text-(--color-gold-600)">{article.title}</h2>
+          <p className="mt-4 leading-relaxed text-(--color-ink)/75">{article.description}</p>
+          <span className="mt-6 inline-block text-sm font-medium text-(--color-navy-800) underline decoration-(--color-gold-500) underline-offset-4">{bn ? "গাইড পড়ুন →" : "Read the guide →"}</span>
+        </Link>)}
       </Container>
     </Section>
   );

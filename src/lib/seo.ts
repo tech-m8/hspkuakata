@@ -47,7 +47,17 @@ export function sitemapEntries(): MetadataRoute.Sitemap {
     priority: 0.8,
     alternates: { languages: { ...guideAlternates, "x-default": guideAlternates[defaultLocale] } },
   }));
-  const postSlugs = ["where-to-stay-in-kuakata", "kuakata-2-day-itinerary", "kuakata-attractions-and-beach-guide"];
+  const postSlugs = [
+    "where-to-stay-in-kuakata",
+    "kuakata-2-day-itinerary",
+    "kuakata-attractions-and-beach-guide",
+    "best-time-to-visit-kuakata",
+    "dhaka-to-kuakata",
+    "kuakata-weekend-itinerary",
+    "kuakata-family-trip-guide",
+    "kuakata-travel-checklist",
+    "kuakata-trip-budget",
+  ];
   const posts = postSlugs.flatMap((slug) => {
     const alternates = Object.fromEntries(locales.map((locale) => [locale, absoluteUrl(`/${locale}/blog/${slug}/`)]));
     return locales.map((locale) => ({
