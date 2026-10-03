@@ -68,7 +68,7 @@ export function Gallery({ dict }: { dict: Dictionary }) {
             >
               <Image
                 src={item.src}
-                alt=""
+                alt={t("gallery.alt", { category: t(`gallery.filters.${item.category}`) })}
                 width={item.width}
                 height={item.height}
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -125,7 +125,7 @@ export function Gallery({ dict }: { dict: Dictionary }) {
           >
             <Image
               src={active.src}
-              alt=""
+              alt={t("gallery.alt", { category: t(`gallery.filters.${active.category}`) })}
               width={active.width}
               height={active.height}
               sizes="100vw"

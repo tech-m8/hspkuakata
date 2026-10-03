@@ -15,7 +15,7 @@
     "bookNow": "Book Now"
   },
   "home": {
-    "heroEyebrow": "Kuakata, Patuakhali",
+    "heroEyebrow": "Hotel in Kuakata · Patuakhali",
     "heroTitle": "Where the Bay of Bengal meets quiet luxury",
     "heroSubtitle": "Family-run, freshly built and a short walk from one of the few beaches in the world where you can watch both sunrise and sunset over the sea.",
     "heroCtaPrimary": "Reserve a room",
@@ -77,7 +77,8 @@
       "balcony": "Balcony",
       "bathroom": "Attached bathroom",
       "view": "Open view"
-    }
+    },
+    "imageAlt": "{{room}} room at Hotel Silver Pearl, Kuakata"
   },
   "inclusions": {
     "breakfast": "Buffet breakfast",
@@ -120,7 +121,8 @@
     "open": "Open photo",
     "close": "Close",
     "next": "Next",
-    "prev": "Previous"
+    "prev": "Previous",
+    "alt": "{{category}} — Hotel Silver Pearl, Kuakata"
   },
   "location": {
     "pageTitle": "Location & how to reach",
@@ -167,5 +169,36 @@
   "footer": {
     "rights": "All rights reserved.",
     "tagline": "Kuakata, Patuakhali, Bangladesh"
+  },
+  "meta": {
+    "titleTemplate": "{{title}} | Hotel Silver Pearl Kuakata",
+    "home": {
+      "title": "Hotel Silver Pearl Kuakata | Hotel near Kuakata Sea Beach",
+      "description": "Hotel Silver Pearl is a new hotel in Kuakata, a short walk from Kuakata Sea Beach. Air-conditioned rooms from {{price}} a night with buffet breakfast, free Wi-Fi and free parking."
+    },
+    "rooms": {
+      "title": "Room Rates & Tariff",
+      "description": "Family Deluxe, Super Deluxe and Deluxe rooms in Kuakata from {{price}} a night, including buffet breakfast, VAT and service charge."
+    },
+    "amenities": {
+      "title": "Amenities",
+      "description": "Buffet breakfast, free Wi-Fi, free parking, a 24-hour front desk and air-conditioned rooms at Hotel Silver Pearl in Kuakata."
+    },
+    "gallery": {
+      "title": "Photos",
+      "description": "Photos of Hotel Silver Pearl in Kuakata: the building, reception, rooms, interiors and dining hall."
+    },
+    "location": {
+      "title": "Location & How to Reach Kuakata",
+      "description": "How to reach Hotel Silver Pearl in Kuakata, Patuakhali from Dhaka by bus, by launch via Barisal or by car over the Padma Bridge."
+    },
+    "contact": {
+      "title": "Contact & Booking",
+      "description": "Book a room at Hotel Silver Pearl in Kuakata. Call {{phone}}, message us on WhatsApp or send a booking inquiry."
+    },
+    "feedback": {
+      "title": "Guest Feedback",
+      "description": "Stayed at Hotel Silver Pearl in Kuakata? Tell us how your visit went."
+    }
   }
 }

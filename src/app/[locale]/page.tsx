@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Hero } from "@/components/home/Hero";
@@ -7,9 +8,24 @@ import { GalleryTeaser } from "@/components/home/GalleryTeaser";
 import { LocationPreview } from "@/components/home/LocationPreview";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { Container } from "@/components/ui/Container";
-import { isLocale, type Locale } from "@/i18n/locales";
+import { isLocale, locales, type Locale } from "@/i18n/locales";
 import { getDictionary } from "@/i18n/getDictionary";
 import { makeTranslator } from "@/i18n/t";
+import { pageMetadata } from "@/lib/seo";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) return {};
+  return pageMetadata(locale, "home");
+}
 
 export default async function HomePage({
   params,

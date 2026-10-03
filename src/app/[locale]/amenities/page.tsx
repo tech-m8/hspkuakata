@@ -6,6 +6,7 @@ import { amenities } from "@/data/amenities";
 import { isLocale, locales, type Locale } from "@/i18n/locales";
 import { getDictionary } from "@/i18n/getDictionary";
 import { makeTranslator } from "@/i18n/t";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -18,8 +19,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const t = makeTranslator(getDictionary(locale));
-  return { title: t("amenities.pageTitle") };
+  return pageMetadata(locale, "amenities");
 }
 
 export default async function AmenitiesPage({

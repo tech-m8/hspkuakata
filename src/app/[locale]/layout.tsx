@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { locales, isLocale, type Locale } from "@/i18n/locales";
 import { getDictionary } from "@/i18n/getDictionary";
 import { makeTranslator } from "@/i18n/t";
+import { hotelJsonLd } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -44,28 +45,8 @@ export async function generateMetadata({
   return {
     metadataBase: new URL(hotel.website),
     verification: { google: hotel.googleSiteVerification },
-    title: { default: t("site.name"), template: `%s · ${t("site.name")}` },
+    title: { default: t("site.name"), template: t("meta.titleTemplate", { title: "%s" }) },
     description: t("site.shortDescription"),
-    openGraph: {
-      title: t("site.name"),
-      description: t("site.shortDescription"),
-      type: "website",
-      locale: locale === "bn" ? "bn_BD" : "en_US",
-      siteName: t("site.name"),
-      images: ["/images/exterior/facade-dusk-1.jpg"],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t("site.name"),
-      description: t("site.shortDescription"),
-      images: ["/images/exterior/facade-dusk-1.jpg"],
-    },
-    alternates: {
-      languages: {
-        en: `/en`,
-        bn: `/bn`,
-      },
-    },
   };
 }
 
@@ -82,27 +63,7 @@ export default async function LocaleLayout({
   const dict = getDictionary(locale as Locale);
   const t = makeTranslator(dict);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Hotel",
-    name: hotel.name,
-    image: [`${hotel.website}/images/exterior/facade-dusk-1.jpg`],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: hotel.city,
-      addressRegion: hotel.district,
-      addressCountry: hotel.country,
-    },
-    telephone: hotel.phones,
-    email: hotel.email,
-    url: hotel.website,
-    priceRange: `BDT ${hotel.priceRangeBdt.min}–${hotel.priceRangeBdt.max}`,
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: hotel.coordinates.lat,
-      longitude: hotel.coordinates.lng,
-    },
-  };
+  const jsonLd = hotelJsonLd(locale as Locale);
 
   return (
     <html

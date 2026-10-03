@@ -23,6 +23,9 @@ export type Room = {
   features: RoomFeatureKey[];
 };
 
+// Matches the offer end date shown in `rooms.validity`.
+export const tariffValidUntil = "2026-11-20";
+
 export const rooms: Room[] = [
   {
     id: "family-deluxe",

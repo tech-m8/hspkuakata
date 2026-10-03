@@ -38,7 +38,7 @@ export function RoomCard({
       <div className="relative aspect-[4/3] lg:aspect-auto bg-(--color-navy-800)/10">
         <Image
           src={room.images[0].src}
-          alt={t(room.nameKey)}
+          alt={t("rooms.imageAlt", { room: t(room.nameKey) })}
           width={room.images[0].width}
           height={room.images[0].height}
           sizes="(max-width: 1024px) 100vw, 50vw"

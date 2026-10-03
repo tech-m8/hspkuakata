@@ -26,7 +26,7 @@ export function RoomHighlights({
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src={room.images[0].src}
-                alt={t(room.nameKey)}
+                alt={t("rooms.imageAlt", { room: t(room.nameKey) })}
                 width={room.images[0].width}
                 height={room.images[0].height}
                 sizes="(max-width: 768px) 100vw, 33vw"

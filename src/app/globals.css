@@ -59,4 +59,13 @@
     font-family: var(--font-bn);
     font-weight: 600;
   }
+
+  /* Body typeface inside a heading, e.g. the eyebrow line within the hero h1. */
+  .font-body {
+    font-family: var(--font-sans);
+  }
+
+  html[lang="bn"] .font-body {
+    font-family: var(--font-bn);
+  }
 }

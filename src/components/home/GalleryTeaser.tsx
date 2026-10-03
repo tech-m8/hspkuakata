@@ -4,10 +4,10 @@ import type { Locale } from "@/i18n/locales";
 import type { Translator } from "@/i18n/t";
 
 const teaser = [
-  { src: "/images/exterior/facade-day.jpg", w: 1200, h: 1600 },
-  { src: "/images/rooms/family-deluxe/twin-bed-marble.jpg", w: 1600, h: 1200 },
-  { src: "/images/rooms/deluxe/bed-marble.jpg", w: 1600, h: 1025 },
-  { src: "/images/exterior/street-view.jpg", w: 1200, h: 1600 },
+  { src: "/images/exterior/facade-day.jpg", w: 1200, h: 1600, category: "exterior" },
+  { src: "/images/rooms/family-deluxe/twin-bed-marble.jpg", w: 1600, h: 1200, category: "rooms" },
+  { src: "/images/rooms/deluxe/bed-marble.jpg", w: 1600, h: 1025, category: "rooms" },
+  { src: "/images/exterior/street-view.jpg", w: 1200, h: 1600, category: "exterior" },
 ];
 
 export function GalleryTeaser({
@@ -27,7 +27,7 @@ export function GalleryTeaser({
           >
             <Image
               src={img.src}
-              alt=""
+              alt={t("gallery.alt", { category: t(`gallery.filters.${img.category}`) })}
               width={img.w}
               height={img.h}
               sizes="(max-width: 640px) 50vw, 25vw"

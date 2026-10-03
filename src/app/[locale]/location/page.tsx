@@ -5,6 +5,7 @@ import { hotel } from "@/data/hotel";
 import { isLocale, locales, type Locale } from "@/i18n/locales";
 import { getDictionary } from "@/i18n/getDictionary";
 import { makeTranslator } from "@/i18n/t";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -17,8 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const t = makeTranslator(getDictionary(locale));
-  return { title: t("location.pageTitle") };
+  return pageMetadata(locale, "location");
 }
 
 export default async function LocationPage({

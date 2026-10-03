@@ -22,11 +22,13 @@ export function Hero({ locale, t }: { locale: Locale; t: Translator }) {
       </div>
       <Container className="py-28 sm:py-36 lg:py-44">
         <div className="max-w-2xl text-white">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-(--color-gold-300) mb-4">
-            {t("home.heroEyebrow")}
-          </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.1] font-display">
-            {t("home.heroTitle")}
+          <h1>
+            <span className="block font-body font-normal text-xs sm:text-sm uppercase tracking-[0.25em] text-(--color-gold-300) mb-4">
+              {t("home.heroEyebrow")}
+            </span>
+            <span className="block text-4xl sm:text-5xl lg:text-6xl leading-[1.1] font-display">
+              {t("home.heroTitle")}
+            </span>
           </h1>
           <p className="mt-5 text-base sm:text-lg text-white/85 leading-relaxed">
             {t("home.heroSubtitle")}
