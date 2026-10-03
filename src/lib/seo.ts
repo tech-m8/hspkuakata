@@ -6,7 +6,7 @@ import { getDictionary } from "@/i18n/getDictionary";
 import { makeTranslator } from "@/i18n/t";
 import { formatBdt } from "@/lib/format";
 
-export const pages = ["home", "rooms", "amenities", "gallery", "location", "contact", "feedback"] as const;
+export const pages = ["home", "rooms", "amenities", "gallery", "location", "blog", "contact", "feedback"] as const;
 export type PageKey = (typeof pages)[number];
 
 const shareImage = "/images/exterior/facade-dusk-1.jpg";
@@ -28,11 +28,11 @@ export function absoluteUrl(path: string): string {
 }
 
 export function sitemapEntries(): MetadataRoute.Sitemap {
-  return locales.flatMap((locale) =>
+  const staticPages = locales.flatMap((locale) =>
     pages.map((page) => ({
       url: absoluteUrl(pagePath(locale, page)),
       changeFrequency: "monthly" as const,
-      priority: page === "home" ? 1 : 0.7,
+      priority: page === "home" ? 1 : page === "blog" ? 0.8 : 0.7,
       alternates: {
         languages: Object.fromEntries(
           Object.entries(languageAlternates(page)).map(([l, p]) => [l, absoluteUrl(p)]),
@@ -40,6 +40,24 @@ export function sitemapEntries(): MetadataRoute.Sitemap {
       },
     })),
   );
+  const guideAlternates = Object.fromEntries(locales.map((locale) => [locale, absoluteUrl(`/${locale}/blog/kuakata-travel-guide/`)]));
+  const guidePages = locales.map((locale) => ({
+    url: guideAlternates[locale],
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+    alternates: { languages: { ...guideAlternates, "x-default": guideAlternates[defaultLocale] } },
+  }));
+  const postSlugs = ["where-to-stay-in-kuakata", "kuakata-2-day-itinerary", "kuakata-attractions-and-beach-guide"];
+  const posts = postSlugs.flatMap((slug) => {
+    const alternates = Object.fromEntries(locales.map((locale) => [locale, absoluteUrl(`/${locale}/blog/${slug}/`)]));
+    return locales.map((locale) => ({
+      url: alternates[locale],
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+      alternates: { languages: { ...alternates, "x-default": alternates[defaultLocale] } },
+    }));
+  });
+  return [...staticPages, ...guidePages, ...posts];
 }
 
 export function pageMetadata(locale: Locale, page: PageKey): Metadata {
