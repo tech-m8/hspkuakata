@@ -10,6 +10,7 @@
     "amenities": "Amenities",
     "gallery": "Gallery",
     "location": "Location",
+    "blog": "Blog",
     "contact": "Contact",
     "feedback": "Feedback",
     "bookNow": "Book Now"
@@ -191,6 +192,10 @@
     "location": {
       "title": "Location & How to Reach Kuakata",
       "description": "How to reach Hotel Silver Pearl in Kuakata, Patuakhali from Dhaka by bus, by launch via Barisal or by car over the Padma Bridge."
+    },
+    "blog": {
+      "title": "Kuakata Travel Blog",
+      "description": "Practical Kuakata travel guides covering the beach, local attractions, transport, and places to stay."
     },
     "contact": {
       "title": "Contact & Booking",

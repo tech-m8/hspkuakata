@@ -78,6 +78,11 @@ export function Footer({ locale, t }: { locale: Locale; t: Translator }) {
               </Link>
             </li>
             <li>
+              <Link className="hover:text-(--color-gold-300)" href={`${base}/blog`}>
+                {t("nav.blog")}
+              </Link>
+            </li>
+            <li>
               <Link className="hover:text-(--color-gold-300)" href={`${base}/contact`}>
                 {t("nav.contact")}
               </Link>

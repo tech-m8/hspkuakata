@@ -14,6 +14,7 @@ export function Header({ locale, t }: { locale: Locale; t: Translator }) {
     { href: `${base}/amenities`, label: t("nav.amenities") },
     { href: `${base}/gallery`, label: t("nav.gallery") },
     { href: `${base}/location`, label: t("nav.location") },
+    { href: `${base}/blog`, label: t("nav.blog") },
     { href: `${base}/contact`, label: t("nav.contact") },
     { href: `${base}/feedback`, label: t("nav.feedback") },
   ];
