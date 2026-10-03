@@ -43,6 +43,7 @@ export async function generateMetadata({
   const t = makeTranslator(getDictionary(locale));
   return {
     metadataBase: new URL(hotel.website),
+    verification: { google: hotel.googleSiteVerification },
     title: { default: t("site.name"), template: `%s · ${t("site.name")}` },
     description: t("site.shortDescription"),
     openGraph: {

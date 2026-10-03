@@ -7,6 +7,7 @@ export const hotel = {
   phones: ["+8801968014750", "+8801942704560"],
   whatsapp: "8801942704560",
   website: "https://hspkuakata.com",
+  googleSiteVerification: "Kr0JmZGY-zTT59fDDTTtyU9_IXZ5uu97fX51LEucN8w",
   coordinates: { lat: 21.8204, lng: 90.11816 },
   priceRangeBdt: { min: 2475, max: 3301 },
 } as const;
